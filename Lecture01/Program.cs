@@ -12,7 +12,7 @@ namespace Lecture01
                 if(value < 1582){
                     throw new IndexOutOfRangeException(": There were no leap years before 1582");
                 } else {
-                    bool key = IsLeapYear(value);
+                    bool key = IsLeapYear5(value);
                     if(key){
                         Console.WriteLine("yay");
                     } else if (!key) {
@@ -24,7 +24,7 @@ namespace Lecture01
             }
         }
 
-        public static bool IsLeapYear(int year){
+        public static bool IsLeapYear5(int year){
             bool LeapYear = false;
             if(year >= 1582){
                 if(year%4 == 0 && year%100 != 0){

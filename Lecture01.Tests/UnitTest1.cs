@@ -6,20 +6,6 @@ namespace Lecture01.Tests
 {
     public class ProgramTests
     {
-        [Fact]
-        public void Main_Check_If_Is_Leap_Year()
-        {
-            //Arrange
-            var writer = new StringWriter();
-            Console.SetOut(writer);
-            //Act
-            Program.Main(new string[0]);
-            //Assert
-            var output = writer.GetStringBuilder().ToString().Trim();
-            Assert.Equal("Hello World!", output);
-        }
-
-
         //Three tests for the number "4", "100" and "400".
         [Fact]
         public void Check_If_Is_Leap_Year0()
@@ -27,7 +13,7 @@ namespace Lecture01.Tests
             //Arrange
             bool t = true;
             //Act
-            Boolean bo = Program.IsLeapYear(4);
+            Boolean bo = Program.IsLeapYear5(4);
             //Assert
             Assert.Equal(bo, t);
         }
@@ -37,7 +23,7 @@ namespace Lecture01.Tests
             //Arrange
             bool f = false;
             //Act
-            Boolean bo = Program.IsLeapYear(100);
+            Boolean bo = Program.IsLeapYear5(100);
             //Assert
             Assert.Equal(bo, f);
         }
@@ -47,7 +33,7 @@ namespace Lecture01.Tests
             //Arrange
             bool t = true;
             //Act
-            Boolean bo = Program.IsLeapYear(400);
+            Boolean bo = Program.IsLeapYear5(400);
             //Assert
             Assert.Equal(bo, t);
         }
