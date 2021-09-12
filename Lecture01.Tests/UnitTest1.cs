@@ -7,15 +7,13 @@ namespace Lecture01.Tests
     public class ProgramTests
     {
         [Fact]
-        public void Main_prints_Hello_World()
+        public void Main_Check_If_Is_Leap_Year()
         {
             //Arrange
             var writer = new StringWriter();
             Console.SetOut(writer);
-
             //Act
             Program.Main(new string[0]);
-
             //Assert
             var output = writer.GetStringBuilder().ToString().Trim();
             Assert.Equal("Hello World!", output);
@@ -27,37 +25,31 @@ namespace Lecture01.Tests
         public void Check_If_Is_Leap_Year0()
         {
             //Arrange
-            var writer = new StringWriter();
-            Console.SetOut(writer);
+            bool t = true;
             //Act
-            Program.IsLeapYear(4);
-            var output = writer.GetStringBuilder().ToString().Trim();
+            Boolean bo = Program.IsLeapYear(4);
             //Assert
-            Assert.Equal("True", output);
+            Assert.Equal(bo, t);
         }
         [Fact]
         public void Check_If_Is_Leap_Year1()
         {
             //Arrange
-            var writer = new StringWriter();
-            Console.SetOut(writer);
+            bool f = false;
             //Act
-            Program.IsLeapYear(100);
-            var output = writer.GetStringBuilder().ToString().Trim();
+            Boolean bo = Program.IsLeapYear(100);
             //Assert
-            Assert.Equal("False", output);
+            Assert.Equal(bo, f);
         }
         [Fact]
         public void Check_If_Is_Leap_Year2()
         {
             //Arrange
-            var writer = new StringWriter();
-            Console.SetOut(writer);
+            bool t = true;
             //Act
-            Program.IsLeapYear(400);
-            var output = writer.GetStringBuilder().ToString().Trim();
+            Boolean bo = Program.IsLeapYear(400);
             //Assert
-            Assert.Equal("True", output);
+            Assert.Equal(bo, t);
         }
     }
 }
