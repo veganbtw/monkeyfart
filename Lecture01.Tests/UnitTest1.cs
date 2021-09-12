@@ -13,7 +13,7 @@ namespace Lecture01.Tests
             //Arrange
             bool t = true;
             //Act
-            Boolean bo = Program.IsLeapYear5(4);
+            Boolean bo = Program.IsLeapYear5(4000);
             //Assert
             Assert.Equal(bo, t);
         }
@@ -23,7 +23,7 @@ namespace Lecture01.Tests
             //Arrange
             bool f = false;
             //Act
-            Boolean bo = Program.IsLeapYear5(100);
+            Boolean bo = Program.IsLeapYear5(1900);
             //Assert
             Assert.Equal(bo, f);
         }
@@ -33,7 +33,7 @@ namespace Lecture01.Tests
             //Arrange
             bool t = true;
             //Act
-            Boolean bo = Program.IsLeapYear5(400);
+            Boolean bo = Program.IsLeapYear5(2000);
             //Assert
             Assert.Equal(bo, t);
         }
